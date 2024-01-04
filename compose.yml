@@ -23,10 +23,8 @@ services:
       - db
     image: wordpress:latest
     volumes:
-       - ./src/wp-admin:/var/www/html/wp-admin
-       - ./src/wp-content:/var/www/html/wp-content
-       - ./src/wp-includes:/var/www/html/wp-includes
-       - wordpress_data:/var/www/html
+        - wordpress_data:/var/www/html
+        - ./src:/var/www/html/
     ports:
       - 8000:80
     restart: always
